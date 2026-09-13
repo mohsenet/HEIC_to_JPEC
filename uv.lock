@@ -38,7 +38,7 @@ wheels = [
 ]
 
 [[package]]
-name = "heic"
+name = "heic-to-jpec"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

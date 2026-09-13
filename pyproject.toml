@@ -1,5 +1,5 @@
 [project]
-name = "heic"
+name = "heic-to-jpec"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.scripts]
-heic = "heic:main"
+heic-to-jpec = "heic_to_jpec:main"
 
 [build-system]
 requires = ["uv_build>=0.12.7,<0.13.0"]
