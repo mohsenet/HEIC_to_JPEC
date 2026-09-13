@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HEIC Converter</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<div class="page">
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ◈
+            </div>
+
+            <div>
+                <h1>HEIC Converter</h1>
+                <p>Convert your photos to JPG</p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="container">
+
+        <section class="hero">
+
+            <span class="badge">
+                PRIVATE &amp; SIMPLE
+            </span>
+
+            <h2>
+                Convert HEIC photos<br>
+                to <span>JPG</span>
+            </h2>
+
+            <p class="hero-text">
+                Upload one or many HEIC images.
+                We'll convert them and give you
+                one ZIP file to download.
+            </p>
+
+        </section>
+
+
+        <!-- Upload Card -->
+        <section class="card">
+
+            <div
+                id="dropZone"
+                class="drop-zone"
+            >
+
+                <div class="upload-icon">
+                    ↑
+                </div>
+
+                <h3>
+                    Drop your photos here
+                </h3>
+
+                <p>
+                    or choose files from your device
+                </p>
+
+
+                <label
+                    for="fileInput"
+                    class="button primary"
+                >
+                    Choose HEIC files
+                </label>
+
+
+                <input
+                    id="fileInput"
+                    type="file"
+                    accept=".heic,.heif,image/heic,image/heif"
+                    multiple
+                    hidden
+                >
+
+                <p class="hint">
+                    HEIC / HEIF • Maximum 500 MB
+                </p>
+
+            </div>
+
+
+            <!-- Selected files -->
+            <div
+                id="fileSection"
+                class="file-section hidden"
+            >
+
+                <div class="section-title">
+
+                    <span>
+                        Selected files
+                    </span>
+
+                    <span
+                        id="fileCount"
+                        class="count"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="fileList"
+                    class="file-list"
+                >
+                </div>
+
+
+                <button
+                    id="convertButton"
+                    class="button convert"
+                >
+                    Convert to JPG
+                </button>
+
+            </div>
+
+
+            <!-- Progress -->
+            <div
+                id="progressSection"
+                class="progress-section hidden"
+            >
+
+                <div class="spinner"></div>
+
+                <h3>
+                    Converting your photos...
+                </h3>
+
+                <p>
+                    Please keep this page open.
+                </p>
+
+            </div>
+
+
+            <!-- Result -->
+            <div
+                id="resultSection"
+                class="result-section hidden"
+            >
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Conversion complete
+                </h3>
+
+                <p>
+                    Your JPG images are ready.
+                </p>
+
+                <a
+                    id="downloadButton"
+                    class="button primary"
+                    href="#"
+                >
+                    Download ZIP
+                </a>
+
+                <button
+                    id="startAgain"
+                    class="button secondary"
+                >
+                    Convert more photos
+                </button>
+
+            </div>
+
+
+            <!-- Error -->
+            <div
+                id="errorSection"
+                class="error-section hidden"
+            >
+
+                <div class="error-icon">
+                    !
+                </div>
+
+                <p id="errorMessage"></p>
+
+                <button
+                    id="errorAgain"
+                    class="button secondary"
+                >
+                    Try again
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Information -->
+        <section class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <div>
+                    <h4>Fast conversion</h4>
+                    <p>
+                        Convert multiple photos at once.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🔒
+                </div>
+
+                <div>
+                    <h4>Private</h4>
+                    <p>
+                        Files are temporarily stored
+                        during conversion.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <h4>High quality</h4>
+                    <p>
+                        JPG output uses quality 95.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            HEIC Converter · Built with Python &amp; Flask
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script
+    src="{{ url_for('static', filename='app.js') }}"
+></script>
+
+</body>
+
+</html>
+
